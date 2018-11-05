@@ -1,33 +1,52 @@
-# Görli Testnet v0.2
-The goerli testnet v0.2 configuration.
+# Görli testnet DAppnode package
 
-Stage: pre-test testnet v0.2. Dashboard: http://ethstats.goerli.ethberl.in:3000/
+Implements the install instructions for the Görli testnet as a DAppNode package
 
-### Parity-Ethereum w/ Clique
+- https://github.com/goerli/testnet
+- https://dappnode.io/
 
-Source: https://github.com/jwasinger/parity-ethereum/tree/clique-poa/
 
-_This is work in progress and will most likely fail._
+## Prerequisites
 
-```
-parity --chain ./parity/goerli.json --reserved-peers ./bootnodes.txt
-```
+- git
 
-**WIP**: https://github.com/paritytech/parity-ethereum/pull/9862
+   Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) commandline tool.
 
-### Go-Ethereum
+- docker
 
-Source: https://github.com/ethereum/go-ethereum
+   Install [docker](https://docs.docker.com/engine/installation). The community edition (docker-ce) will work. In Linux make sure you grant permissions to the current user to use docker by adding current user to docker group, `sudo usermod -aG docker $USER`. Once you update the users group, exit from the current terminal and open a new one to make effect.
 
-```
-geth --datadir /tmp/goerli/geth init ./geth/goerli.genesis
-geth --datadir /tmp/goerli/geth
-```
+- docker-compose
 
-### Pantheon
+   Install [docker-compose](https://docs.docker.com/compose/install)
+   
+**Note**: Make sure you can run `git`, `docker ps`, `docker-compose` without any issue and without sudo command.
 
-Source:
 
-```
-pantheon --genesis=./geth/goerli.genesis --datadir=/tmp/goerli/pantheon
-```
+## Buidling
+
+`docker-compose -f docker-compose-ethgoerli.yml build`
+
+## Running
+
+### Start
+
+`docker-compose -f docker-compose-ethgoerli.yml  up -d`
+
+### View logs
+
+`docker-compose -f docker-compose-ethgoerli.yml  logs -f`
+
+### Stop
+
+`docker-compose -f docker-compose-ethgoerli.yml down`
+
+## Note
+
+This is early stage software - the testnet is not operational yet
+
+## TODO's
+
+- Add a way to add the validator account to docker image upon build
+
+
