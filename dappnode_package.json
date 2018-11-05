@@ -1,7 +1,7 @@
 {
   "name": "ethgoerli.public.dappnode.eth",
   "version": "0.0.1",
-  "description": "göerli testnet sealing/validating node",
+  "description": "Görli testnet sealing/validating node",
   "avatar": "/ipfs/QmWAVqn28zMWqBpv2zhD1hyzXRLmzTpmxJvtuvVUTwReBj",
   "type": "service",
   "image": {
