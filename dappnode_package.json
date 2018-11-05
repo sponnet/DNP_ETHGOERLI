@@ -1,0 +1,30 @@
+{
+  "name": "iethgoerli.public.dappnode.eth",
+  "version": "0.0.1",
+  "description": "göerli testnet sealing/validating node",
+  "avatar": "/ipfs/QmTC6dQATsoy2X9We5x7bVEZnUnYs3XLnbfeF62QkeUXTw",
+  "type": "service",
+  "image": {
+    "path": "ethgoerli.public.dappnode.eth_0.0.1.tar.xz",
+    "hash": "/ipfs/QmU8sf7KanPBDJyg6ggSqDKLTeBsqJKmGncrFJdW6ogknC",
+    "size": 23743208
+  },
+  "author": "Stefaan Ponnet",
+  "contributors": [
+  ],
+  "keywords": [
+    "Ethereum"
+  ],
+  "homepage": {
+    "homepage": "https://github.com/sponnet/DNP_ETHGOERLI#readme"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sponnet/DNP_ETHGOERLI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sponnet/DNP_ETHGOERLI/issues"
+  },
+  "license": "MIT"
+}
+

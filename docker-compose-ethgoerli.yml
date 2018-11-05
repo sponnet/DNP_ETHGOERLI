@@ -1,27 +1,16 @@
 version: '3.4'
 
-networks:
-    network:
-        driver: bridge
-        ipam:
-            config:
-                - subnet: 172.33.0.0/16
-
 volumes:
   ethgoerlidnpdappnodeeth_data: {}
   
 services:
   ethgoerli.dnp.dappnode.eth:
     build: ./build
-    image: ethgoerli.dnp.dappnode.eth:0.0.2
-    container_name: DAppNodeContrib-ethgoerli.dnp.dappnode.eth
+    image: ethgoerli.public.dappnode.eth:0.0.1
+    container_name: ethgoerli.public.dappnode.eth
     restart: always
     volumes:
       - ethgoerlidnpdappnodeeth_data:/root/.local/share/goerli.ethereum/
     ports:
       - "30304:30303"
       - "30304:30303/udp"
-    dns: 172.33.1.2
-    networks:
-      network:
-        ipv4_address: 172.33.2.1
