@@ -2,12 +2,11 @@
   "name": "ethgoerli.public.dappnode.eth",
   "version": "0.0.1",
   "description": "göerli testnet sealing/validating node",
-  "avatar": "/ipfs/QmTC6dQATsoy2X9We5x7bVEZnUnYs3XLnbfeF62QkeUXTw",
+  "avatar": "/ipfs/QmWAVqn28zMWqBpv2zhD1hyzXRLmzTpmxJvtuvVUTwReBj",
   "type": "service",
   "image": {
     "path": "ethgoerli.public.dappnode.eth_0.0.1.tar.xz",
-    "hash": "/ipfs/QmU8sf7KanPBDJyg6ggSqDKLTeBsqJKmGncrFJdW6ogknC",
-    "size": 23743208
+    "hash": "/ipfs/QmU8sf7KanPBDJyg6ggSqDKLTeBsqJKmGncrFJdW6ogknC"
   },
   "author": "Stefaan Ponnet",
   "contributors": [
