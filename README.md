@@ -49,4 +49,23 @@ This is early stage software - the testnet is not operational yet
 
 - Add a way to add the validator account to docker image upon build
 
+## Create & upload DAppnode package
+
+(Adjust version number according to the version you want to deploy)
+
+- Save docker image
+
+`docker save ethgoerli.public.dappnode.eth:0.0.1 | xz -e9vT0 >  ethgoerli.public.dappnode.eth_0.0.1.tar.gz`
+
+- Upload image to IPFS
+
+`ipfs --api=/ip4/109.123.70.141/tcp/5002 add ethgoerli.public.dappnode.eth_0.0.1.tar.gz`
+
+- Paste the resulting IPFS hash in `dappnode_package.json` 
+
+- Upload the manifest to IPFS too
+
+`ipfs --api=/ip4/109.123.70.141/tcp/5002 add dappnode_package.json`
+
+- The resulting IPFS hash is now your package's hash. Use this hash in your dappnode's admin panel to install the pacakge.
 
